@@ -12,10 +12,11 @@ make sure the directory is readable by the Portal web-workers (default `www-data
 For example - on a Portal system:
 
 ```
-wget https://github.com/Cantemo/SearchPageExportExample/archive/master.zip
-unzip master.zip
-mv search_page_export_example/ /opt/cantemo/portal/portal/plugins/master/search_page_export_example/
-chown www-data:www-data /opt/cantemo/portal/portal/plugins/master/search_page_export_example/
+curl -L https://github.com/Cantemo/SearchPageExportExample/archive/master.zip > SearchPageExportExample-master.zip 
+unzip SearchPageExportExample-master.zip 
+mv SearchPageExportExample-master/search_page_export_example /opt/cantemo/portal/portal/plugins/
+chown -R www-data:www-data /opt/cantemo/portal/portal/plugins/search_page_export_example
+sudo service portal-web restart
 ```
 
 ## Usage
