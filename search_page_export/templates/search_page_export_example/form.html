@@ -1,0 +1,45 @@
+<!--
+This form allows user to select which data to export.
+If it used from the view portal.plugins.search_page_export_example.views.ExportFormView
+
+This could also use Django forms to define the fields in Python - see
+https://docs.djangoproject.com/en/1.11/topics/forms/
+ -->
+<p>Select data to export</p>
+<!--
+We get the target URL as "csv_export_link" parameter from Python - we must use the "safe"
+to put it in the HTML as such without escaping ampersands (&)
+-->
+<form action="{{ csv_export_link|safe }}" method="post">
+    <!--
+    We need to add a Cross Site Request Forgery protection token so the end-point accepts this post, see
+    https://docs.djangoproject.com/en/1.11/ref/csrf/
+    -->
+    {% csrf_token %}
+    <ul>
+        <li>
+            <label>
+                <!--
+                The "name" here affects what gets sent to the back-end when the user clicks Export,
+                "checked" makes this selected by default
+                -->
+                <input type="checkbox" name="export_item_id" checked="checked">
+                Item ID
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" name="export_item_title" checked="checked">
+                Title
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" name="export_item_created" checked="checked">
+                Creation date
+            </label>
+        </li>
+
+        <li><input type="submit" value="Export"></li>
+    </ul>
+</form>

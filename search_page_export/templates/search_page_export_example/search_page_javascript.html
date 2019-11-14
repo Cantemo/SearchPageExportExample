@@ -1,0 +1,33 @@
+<!-- This HTML temlate defines the JavaScript function triggered when clicking the example action -->
+<script>
+    function openSearchPageExampleExportDialog(event) {
+        // Prevent standard click event handling
+        event.preventDefault();
+
+        // Open a dialog and load the example form to it
+        var standardOptions = {
+            width: 600,
+            modal: true,
+            resizable: false,
+            dialogClass: 'myDialogClass',
+            title: gettext('Export Items as CSV'),
+            show: {effect: "fade", duration: 300},
+            hide: {effect: "fade", duration: 300},
+            buttons: [{
+                text: 'Close',
+                click: function (event) {
+                    $('.ui-dialog-content').dialog('close');
+                },
+                class: 'cancel-export-button ui-dialog-button-cancel'
+            }]
+        };
+        // Initialize the popup with empty contents...
+        $dialogEl = $('<div></div>');
+        // ... and then load the form contents from views.ExportFormView. Pass on
+        // the user selection as query parameters - see
+        // http://doc.cantemo.com/latest/DevelopmentGuide/modules/search_results.html
+        $dialogEl.load(
+            '/search_page_export_example/?' + cntmo.app.page.searchresults.getQueryString()
+        ).dialog(standardOptions);
+    }
+</script>
