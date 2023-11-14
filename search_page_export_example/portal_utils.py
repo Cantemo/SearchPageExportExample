@@ -21,11 +21,12 @@ except ImportError:
         :rtype: list(str) or collections.Iterable[str]
         """
         from portal.vidispine.tasks import get_item_ids_from_search_id
-        search_id = request.GET.get('search_id')
-        ignore_list = request.GET.getlist('ignore_list')
+
+        search_id = request.GET.get("search_id")
+        ignore_list = request.GET.getlist("ignore_list")
         if search_id:
             # This is a generator
             return get_item_ids_from_search_id(search_id, ignore_list, request.user.username)
         else:
             # A plain list of IDs
-            return request.GET.getlist('selected_objects')
+            return request.GET.getlist("selected_objects")
