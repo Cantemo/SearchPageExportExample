@@ -4,7 +4,7 @@ Portal plugin that implements an action based on user selection on the search pa
 
 This plugin requires Cantemo 6.0.0 or later.
 
-For a version that works on Cantemo 4.1 or 5.x, please see [tag cantemo5](tree/cantemo5)
+For a version that works on Cantemo 4.1 or 5.x, please see [tag cantemo5](/tree/cantemo5)
 
 
 ## Installation
