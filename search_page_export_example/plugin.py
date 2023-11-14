@@ -1,7 +1,7 @@
 """
 This code registers the plugins requires by this example application.
 
-Another example can be generated on a Portal system by running the command:
+Another example can be generated on a Cantemo system by running the command:
 
     /opt/cantemo/portal/manage.py start_portal_app <name_of_app>
 """

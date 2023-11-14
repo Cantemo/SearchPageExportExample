@@ -1,4 +1,4 @@
-Portal plugin that implements an action based on user selection on the search page.
+Cantemo plugin that implements an action based on user selection on the search page.
 
 ## Prerequisites
 
@@ -10,9 +10,9 @@ For Cantemo 5.x or 4.x, please see [this version](https://github.com/Cantemo/Sea
 ## Installation
 
 To install this plugin, copy the contents of this directory to `/opt/cantemo/portal/portal/plugins/`,
-make sure the directory is readable by the Portal web-workers (default `www-data`).
+make sure the directory is readable by the Cantemo web-workers (default `www-data`).
 
-For example - on a Portal system:
+For example - on a Cantemo system:
 
 ```
 curl -L https://github.com/Cantemo/SearchPageExportExample/archive/master.zip > SearchPageExportExample-master.zip 

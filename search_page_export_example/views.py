@@ -9,12 +9,8 @@ from rest_framework.response import Response
 
 from portal.generic.baseviews import CView
 from portal.generic.decorators import HasAnyRole
+from portal.utils.general import get_item_ids_from_request
 from portal.vidispine.iitem import ItemHelper
-
-# This can be replaced with simply
-#   from portal.utils.general import get_item_ids_from_request
-# in Portal 4.2.0:
-from .portal_utils import get_item_ids_from_request
 
 log = logging.getLogger(__name__)
 
@@ -31,7 +27,7 @@ class ExportFormView(CView):
     #
     # A custom role for our plugin could also be used - see
     #    Help > System API Reference > groups > API for creating custom portal roles
-    # ... on your Portal system on how those can be created.
+    # ... on your Cantemo system on how those can be created.
     permission_classes = [HasAnyRole]
     roles = ["portal_items_read"]
 
