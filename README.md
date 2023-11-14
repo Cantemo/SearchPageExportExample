@@ -2,7 +2,10 @@ Portal plugin that implements an action based on user selection on the search pa
 
 ## Prerequisites
 
-This plugin requires Portal 4.1.2 or later.
+This plugin requires Cantemo 6.0.0 or later.
+
+For a version that works on Cantemo 4.1 or 5.x, please see commit 5b21b04dc8410a03512246fbc916c8778960f22d
+
 
 ## Installation
 
