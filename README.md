@@ -17,7 +17,7 @@ For example - on a Cantemo system:
 ```
 curl -L https://github.com/Cantemo/SearchPageExportExample/archive/master.zip > SearchPageExportExample-master.zip 
 unzip SearchPageExportExample-master.zip 
-mv SearchPageExportExample-master/search_page_export_example /opt/cantemo/portal/portal/plugins/
+sudo mv SearchPageExportExample-master/search_page_export_example /opt/cantemo/portal/portal/plugins/
 sudo chown -R www-data:www-data /opt/cantemo/portal/portal/plugins/search_page_export_example
 sudo service portal-web restart
 ```
